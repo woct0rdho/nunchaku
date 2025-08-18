@@ -10,9 +10,9 @@ import torch.nn as nn
 from torch.nn import functional as F
 
 try:
-    from timm.models.layers import drop_path, to_2tuple, trunc_normal_
-except ImportError:
     from timm.layers import drop_path, to_2tuple, trunc_normal_
+except ImportError:
+    from timm.models.layers import drop_path, to_2tuple, trunc_normal_
 
 from .rope import VisionRotaryEmbeddingFast
 from .transformer import PatchDropout
