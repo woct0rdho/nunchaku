@@ -9,9 +9,9 @@ from torch import nn
 from torch.nn import functional as F
 
 try:
-    from timm.models.layers import trunc_normal_
+    from timm.layers import trunc_normal_
 except ImportError:
-    from timm.layers import trunc_normal_  # noqa: F401
+    from timm.models.layers import trunc_normal_  # noqa: F401
 
 from .utils import to_2tuple
 
